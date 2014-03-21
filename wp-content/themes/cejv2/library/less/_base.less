@@ -21,6 +21,12 @@ body {
 	color: #565656;
 }
 
+p {
+	font-size: 0.8rem;
+	// text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
 /*********************
 04. LINK STYLES
 *********************/
@@ -48,7 +54,7 @@ a, a:visited {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: @sans-serif;
 	text-rendering: optimizelegibility;
-	font-weight: 400;
+	font-weight: 300;
 	text-transform: uppercase;
 
 	a {
@@ -72,7 +78,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-size: 0.8em;
+	font-size: 0.85em;
 	letter-spacing: 1px;
 	line-height: 5px;
 }
@@ -84,7 +90,8 @@ h4, .h4 {
 #header {
 	width: 99.999999993%;
 	position: relative;
-  	float: left;
+	clear: both;
+	height: 100px;
 
 	#inner-header {
 		width: 96%;
@@ -92,6 +99,10 @@ h4, .h4 {
 	}
 
 	#logo {
+		float: left;
+		padding-top: 25px;
+		margin-left: 10px;
+
 		img {
 			max-width: 75px;
 			height: auto;
@@ -105,19 +116,68 @@ h4, .h4 {
 	}
 }
 
+nav {
+	a {
+		font-family: @serif;
+		font-weight: 100;
+		font-style: italic;
+	}
+}
+
+.mobile-nav-button {
+	padding: 3px 0 5px 0;
+	border: 1px solid @green;
+	color: @green;
+	font-family: @serif;
+	font-style: italic;
+	font-weight: 100;
+	width: 80px;
+	text-align: center;
+	cursor: pointer;
+	float: right;
+	margin-right: 10px;
+	margin-top: 35px;
+}
+
+.mobile-nav-dropdown {
+	border-top: 1px solid darken(@green, 50%);
+	text-align: center;
+
+	ul {
+		width: 320px;
+		margin: 0 auto;
+		position: relative;
+
+		li {
+			display: inline;
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.tagline-desktop {
+	display: none;
+}
+
+.tagline-mobile {
+	text-align: center;
+	border-bottom: 1px solid darken(@green, 50%);
+	border-top: 1px solid darken(@green, 50%);
+}
+
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 50px;
+	padding:10%;
 	width: 99.999999993%;
 	position: relative;
-  	float: left;
 
 	#inner-content {
-		width: 96%;
-		margin: 0 auto;
 		text-align: left;
 
 		#hello {
@@ -131,25 +191,29 @@ h4, .h4 {
 			}
 
 			h3 {
-				padding: 0 240px;
+				// padding: 0 240px;
 				color: @green !important;
 				opacity: 0.2;
+				font-weight: 100 !important;
 			}
 
 			p {
 				text-align: left !important;
-				padding: 0 180px;
+				// padding: 0 180px;
 			}
 		}
 	}
 
 	.resume {
-		a {
+		a, h2, span {
 			text-decoration: none !important;
+			color: #FFD698;
 		}
 
 		span {
 			font-style: italic;
+			font-family: @serif;
+			font-weight: 100;
 		}
 	}
 }
@@ -718,42 +782,19 @@ h4, .h4 {
 13. FOOTER STYLES
 *********************/
 
-.footer {
-	clear: both;
-	#inner-footer {
+footer {
+
+	p {
+		font-size: 0.2rem;
+		text-transform: uppercase;
+		text-align: center;
 	}
-	nav {
-		ul.nav {
-			li {
-				a {}
 
-				&:first-child {}
+	.left {
 
-				&:last-child {}
-			}
+		p {
+			visibility: hidden;
 		}
 	}
 }
-
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-	.footer-links {
-
-		ul {
-
-			li {}
-
-		}
-
-	} /* end .footer-links */
-
-
-	.copyright {}
 

@@ -597,6 +597,10 @@ body {
   line-height: 1.5;
   color: #565656;
 }
+p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 /*********************
 04. LINK STYLES
 *********************/
@@ -629,7 +633,7 @@ h5,
 .h5 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 h1 a,
@@ -661,7 +665,7 @@ h3,
 }
 h4,
 .h4 {
-  font-size: 0.8em;
+  font-size: 0.85em;
   letter-spacing: 1px;
   line-height: 5px;
 }
@@ -671,11 +675,17 @@ h4,
 #header {
   width: 99.999999993%;
   position: relative;
-  float: left;
+  clear: both;
+  height: 100px;
 }
 #header #inner-header {
   width: 96%;
   margin: 0 auto;
+}
+#header #logo {
+  float: left;
+  padding-top: 25px;
+  margin-left: 10px;
 }
 #header #logo img {
   max-width: 75px;
@@ -686,18 +696,57 @@ h4,
 #header nav {
   display: none;
 }
+nav a {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
+  font-style: italic;
+}
+.mobile-nav-button {
+  padding: 3px 0 5px 0;
+  border: 1px solid #aed66e;
+  color: #aed66e;
+  font-family: 'Josefin Slab', serif;
+  font-style: italic;
+  font-weight: 100;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  margin-top: 35px;
+}
+.mobile-nav-dropdown {
+  border-top: 1px solid #27360f;
+  text-align: center;
+}
+.mobile-nav-dropdown ul {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+.mobile-nav-dropdown ul li {
+  display: inline;
+}
+.mobile-nav-dropdown ul li a {
+  text-decoration: none;
+}
+.tagline-desktop {
+  display: none;
+}
+.tagline-mobile {
+  text-align: center;
+  border-bottom: 1px solid #27360f;
+  border-top: 1px solid #27360f;
+}
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 50px;
+  padding: 10%;
   width: 99.999999993%;
   position: relative;
-  float: left;
 }
 #content #inner-content {
-  width: 96%;
-  margin: 0 auto;
   text-align: left;
 }
 #content #inner-content #hello span {
@@ -706,19 +755,23 @@ h4,
   font-weight: 300 !important;
 }
 #content #inner-content #hello h3 {
-  padding: 0 240px;
   color: #aed66e !important;
   opacity: 0.2;
+  font-weight: 100 !important;
 }
 #content #inner-content #hello p {
   text-align: left !important;
-  padding: 0 180px;
 }
-#content .resume a {
+#content .resume a,
+#content .resume h2,
+#content .resume span {
   text-decoration: none !important;
+  color: #FFD698;
 }
 #content .resume span {
   font-style: italic;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
 }
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -1031,19 +1084,14 @@ h4,
 /*********************
 13. FOOTER STYLES
 *********************/
-.footer {
-  clear: both;
+footer p {
+  font-size: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
 }
-/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-/* end .footer-links */
+footer .left p {
+  visibility: hidden;
+}
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1133,7 +1181,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   /******************************************************************
 Site Name:
 Author:
@@ -1251,26 +1299,25 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
   #header {
-    width: 25.5%;
-    position: relative;
+    width: 25%;
     float: left;
     margin-left: 0;
+    height: auto !important;
   }
   #header #inner-header {
     padding-top: 50px;
-    width: 300px;
   }
   #header #logo {
     position: relative;
     margin: 0 auto;
     text-align: center;
+    float: none !important;
   }
   #header #logo img {
     max-width: 150px;
   }
   #header nav {
     display: block !important;
-    width: 300px;
     position: relative;
     margin: 0 auto;
   }
@@ -1286,12 +1333,13 @@ HEADER STYLES
     text-decoration: none;
     padding: 5px 0 0 0;
     text-align: center;
+    opacity: 0.5;
   }
   #header nav ul#menu-main-menu li:hover a {
     background: url('../images/icons.png') no-repeat;
     background-size: 40px 9px;
     background-position: right 13px;
-    opacity: 0.5;
+    opacity: 1;
   }
   #header nav ul#menu-main-menu li.current-menu-item a,
   #header nav ul#menu-main-menu li.current_page_item a,
@@ -1299,19 +1347,33 @@ HEADER STYLES
     background: url('../images/icons.png') no-repeat;
     background-size: 40px 9px;
     background-position: right 13px;
-    opacity: 0.5;
+    opacity: 1;
+  }
+  .tagline-desktop {
+    display: block !important;
+  }
+  .tagline-mobile {
+    display: none;
+  }
+  .mobile-nav-button,
+  .mobile-nav-dropdown {
+    display: none;
   }
   /*********************
 CONTENT
 *********************/
   #content {
     width: 74.30939226%;
-    position: relative;
     float: right;
+    padding: 50px 50px 0 50px !important;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    margin: 50px 0;
     border-left: 1px solid #27360f;
   }
   #content #inner-content {
-    width: 90%;
+    width: 100%;
   }
   /*********************
 SIDEBARS & ASIDES
@@ -1349,19 +1411,24 @@ SIDEBARS & ASIDES
   /*********************
 FOOTER STYLES
 *********************/
-  /*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-  .footer-links ul li {
-    /*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
+  footer {
+    width: 100%;
   }
-  /* end .footer-links */
+  footer .left {
+    width: 25%;
+    float: left;
+  }
+  footer .left p {
+    visibility: visible;
+  }
+  footer .right {
+    width: 74.30939226%;
+    float: right;
+    border-left: 1px solid #27360f;
+  }
+  footer .right p {
+    visibility: hidden !important;
+  }
 }
 /*
 DESKTOP

@@ -32,20 +32,20 @@ HEADER STYLES
 *********************/
 
 #header {
-	width: 25.5%;
-	position: relative;
+	width:25%;
   	float: left;
   	margin-left: 0;
+  	height: auto !important;
 
   	#inner-header {
   		padding-top: 50px;
-  		width: 300px;
   	}
 
 	#logo {
 		position: relative;
 		margin: 0 auto;
 		text-align: center;
+		float: none !important;
 
 		img {
 			max-width: 150px;
@@ -54,7 +54,6 @@ HEADER STYLES
 
 	nav {
 		display: block !important;
-		width: 300px;
 		position: relative;
 		margin: 0 auto;
 
@@ -69,6 +68,7 @@ HEADER STYLES
 					text-decoration: none;
 					padding: 5px 0 0 0;
 					text-align: center;
+					opacity: 0.5;
 				}
 
 				&:hover {
@@ -77,7 +77,7 @@ HEADER STYLES
 						background: url('../images/icons.png') no-repeat;
 						background-size: 40px 9px;
 						background-position: right 13px;
-						opacity: 0.5;
+						opacity: 1;
 					}
 				}
 
@@ -92,12 +92,25 @@ HEADER STYLES
 					background: url('../images/icons.png') no-repeat;
 					background-size: 40px 9px;
 					background-position: right 13px;
-					opacity: 0.5;
+					opacity: 1;
 				}
 
 			}  /* end current highlighters */
 		}
 	}
+}
+
+.tagline-desktop {
+	display: block !important;
+}
+
+.tagline-mobile {
+	display: none;
+}
+
+.mobile-nav-button,
+.mobile-nav-dropdown {
+	display: none;
 }
 
 /*********************
@@ -106,12 +119,16 @@ CONTENT
 
 #content {
 	width: 74.30939226%;
-	position: relative;
   	float: right;
+  	padding: 50px 50px 0 50px !important;
+  	border-right: 0;
+  	border-top: 0;
+  	border-bottom: 0;
+  	margin: 50px 0;
   	border-left: 1px solid darken(@green, 50%);
 
   	#inner-content {
-  		width: 90%;
+  		width: 100%;
   	}
 }
 
@@ -242,24 +259,24 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
+footer {
+	width: 100%;
+	.left {
+		width: 25%;
+		float: left;
+		
+		p {
+			visibility: visible;
+		}	
 	}
-} /* end .footer-links */
 
+	.right {
+		width: 74.30939226%;
+		float: right;
+		border-left: 1px solid darken(@green, 50%);
+
+		p {
+			visibility: hidden !important;
+		}	
+	}
+}

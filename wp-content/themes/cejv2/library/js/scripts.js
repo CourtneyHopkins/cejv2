@@ -40,16 +40,6 @@ jQuery(document).ready(function($) {
 	/* getting viewport width */
 	var responsive_viewport = $(window).width();
 	
-	/* if is below 481px */
-	if (responsive_viewport < 481) {
-	
-	} /* end smallest screen */
-	
-	/* if is larger than 481px */
-	if (responsive_viewport > 481) {
-	
-	} /* end larger than 481px */
-	
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
 	
@@ -60,16 +50,11 @@ jQuery(document).ready(function($) {
 		
 	}
 	
-	/* off the bat large screen actions */
-	if (responsive_viewport > 1030) {
-	
-	}
-	
-	
-	// add all your scripts here
-	
- 
-}); /* end of as page load scripts */
+	$('.mobile-nav-button').click(function() {
+		$('.mobile-nav-dropdown').slideToggle('fast');
+	});
+
+});
 
 
 /*! A fix for the iOS orientationchange zoom bug.

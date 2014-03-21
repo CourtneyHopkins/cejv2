@@ -23,7 +23,7 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<?php wp_head(); ?>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100italic,300italic,400italic|Open+Sans:300,600,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body <?php body_class(); ?>>
 		<div id="container">
@@ -33,12 +33,23 @@
 						<a href="<?php echo home_url(); ?>" rel="nofollow">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo_green_v2.png" /><br />
 						</a>
-						<h4>Web Development</h4>
-						<h4>&amp;</h4>
-						<h4>Design</h4>
+						<div class="tagline-desktop">
+							<h4>Web Development</h4>
+							<h4>&amp;</h4>
+							<h4>Design</h4>
+						</div>
 					</div>
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
 					</nav>
+					<div class="mobile-nav-button">
+						<span>menu</span>
+					</div>
 				</div>
 			</header>
+			<div class="mobile-nav-dropdown" style="display: none;">
+				<?php bones_main_nav(); ?>
+			</div>
+			<div class="tagline-mobile">
+				<h4>Web Development &nbsp;&amp;&nbsp; Design</h4>
+			</div>
