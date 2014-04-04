@@ -393,13 +393,16 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 #header {
-  width: 25%;
+  width: 25% !important;
   float: left;
-  margin-left: 0;
+  margin: 0 !important;
   height: auto !important;
+  padding: 0 !important;
 }
 #header #inner-header {
-  padding-top: 50px;
+  padding-top: 75px;
+  width: 96%;
+  margin: 0 auto;
 }
 #header #logo {
   position: relative;
@@ -459,21 +462,37 @@ CONTENT
 #content {
   width: 74.30939226%;
   float: right;
-  padding: 50px 50px 0 50px !important;
+  padding: 0 !important;
   border-right: 0;
   border-top: 0;
   border-bottom: 0;
-  margin: 50px 0;
+  margin: 75px 0 0 0;
   border-left: 1px solid #27360f;
 }
 #content #inner-content {
   width: 100%;
 }
+.article-container {
+  height: 500px;
+  overflow: scroll;
+}
+.article-container article {
+  margin: 5% !important;
+  border-left: 8px solid #aed66e;
+  border-top: 8px solid #aed66e;
+}
+.article-container article h1 {
+  font-size: 3rem;
+  margin-top: 0 !important;
+}
+.article-container article .day-month {
+  font-size: 2.3rem;
+}
 /*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-  margin-top: 2.2em;
+  border-bottom: 1px solid #27360f;
 }
 .widgettitle {
   border-bottom: 2px solid #444;

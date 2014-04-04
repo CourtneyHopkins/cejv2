@@ -673,19 +673,15 @@ h4,
 06. HEADER STYLES
 *********************/
 #header {
-  width: 99.999999993%;
+  width: 100%;
   position: relative;
   clear: both;
   height: 100px;
-}
-#header #inner-header {
-  width: 96%;
-  margin: 0 auto;
+  padding: 0 10%;
 }
 #header #logo {
   float: left;
-  padding-top: 25px;
-  margin-left: 10px;
+  margin: 25px 0 0 10px;
 }
 #header #logo img {
   max-width: 75px;
@@ -702,7 +698,7 @@ nav a {
   font-style: italic;
 }
 .mobile-nav-button {
-  padding: 3px 0 5px 0;
+  padding: 0 0 5px 0;
   border: 1px solid #aed66e;
   color: #aed66e;
   font-family: 'Josefin Slab', serif;
@@ -742,7 +738,7 @@ nav a {
 08. POSTS & CONTENT STYLES
 *********************/
 #content {
-  padding: 10%;
+  padding: 5% 10%;
   width: 99.999999993%;
   position: relative;
 }
@@ -772,6 +768,37 @@ nav a {
   font-style: italic;
   font-family: 'Josefin Slab', serif;
   font-weight: 100;
+}
+article {
+  background: #ffffff;
+  margin: 2%;
+  padding: 4%;
+  -webkit-box-shadow: 0 0 4px 0 #000000;
+  -moz-box-shadow: 0 0 4px 0 #000000;
+  box-shadow: 0 0 4px 0 #000000;
+  border-left: 6px solid #aed66e;
+  border-top: 6px solid #aed66e;
+}
+article h1 {
+  font-family: 'Josefin Slab', serif !important;
+  font-style: italic;
+  text-transform: capitalize !important;
+}
+article .day-month {
+  font-size: 2rem;
+  color: #aed66e;
+  text-align: center;
+  font-style: italic;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 100;
+}
+article .year {
+  font-size: 10px;
+  letter-spacing: 7px;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -1078,6 +1105,23 @@ nav a {
 /*********************
 12. SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  margin-top: 10px !important;
+}
+.sidebar li {
+  list-style-type: none;
+  margin-bottom: 15px !important;
+  padding-left: 20px;
+}
+.sidebar li a {
+  text-decoration: none;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
 .widget ul li {
   /* deep nesting */
 }
@@ -1181,7 +1225,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 960px) {
   /******************************************************************
 Site Name:
 Author:
@@ -1299,13 +1343,16 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
   #header {
-    width: 25%;
+    width: 25% !important;
     float: left;
-    margin-left: 0;
+    margin: 0 !important;
     height: auto !important;
+    padding: 0 !important;
   }
   #header #inner-header {
-    padding-top: 50px;
+    padding-top: 75px;
+    width: 96%;
+    margin: 0 auto;
   }
   #header #logo {
     position: relative;
@@ -1365,21 +1412,37 @@ CONTENT
   #content {
     width: 74.30939226%;
     float: right;
-    padding: 50px 50px 0 50px !important;
+    padding: 0 !important;
     border-right: 0;
     border-top: 0;
     border-bottom: 0;
-    margin: 50px 0;
+    margin: 75px 0 0 0;
     border-left: 1px solid #27360f;
   }
   #content #inner-content {
     width: 100%;
   }
+  .article-container {
+    height: 500px;
+    overflow: scroll;
+  }
+  .article-container article {
+    margin: 5% !important;
+    border-left: 8px solid #aed66e;
+    border-top: 8px solid #aed66e;
+  }
+  .article-container article h1 {
+    font-size: 3rem;
+    margin-top: 0 !important;
+  }
+  .article-container article .day-month {
+    font-size: 2.3rem;
+  }
   /*********************
 SIDEBARS & ASIDES
 *********************/
   .sidebar {
-    margin-top: 2.2em;
+    border-bottom: 1px solid #27360f;
   }
   .widgettitle {
     border-bottom: 2px solid #444;
