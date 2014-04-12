@@ -494,6 +494,10 @@ SIDEBARS & ASIDES
 .sidebar {
   border-bottom: 1px solid #27360f;
 }
+.sidebar .search {
+  float: right;
+  margin-right: 5%;
+}
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;

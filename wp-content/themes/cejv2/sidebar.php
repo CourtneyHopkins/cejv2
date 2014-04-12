@@ -3,7 +3,7 @@
 						$args = array(
 							'show_option_all'    => '',
 							'orderby'            => 'name',
-							'order'              => 'ASC',
+							'order'              => 'DESC',
 							'style'              => 'list',
 							'show_count'         => 0,
 							'hide_empty'         => 1,
@@ -27,5 +27,14 @@
 							'walker'             => null 
 						);
 					?>
-					<?php wp_list_categories( $args ); ?>
+					<ul>
+						<li><a href="/blog/">All</a></li>
+						<?php wp_list_categories( $args ); ?>
+					</ul>	
+					<div class="search">
+						<form>
+							<input type="text" name="s" id="s" placeholder="search" />
+							<input type="submit" id="search" />
+						</form>
+					</div>
 				</div>
