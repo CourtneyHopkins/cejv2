@@ -472,6 +472,9 @@ CONTENT
 #content #inner-content {
   width: 100%;
 }
+#content #inner-content #hello {
+  padding: 0 15% !important;
+}
 .article-container {
   height: 500px;
   overflow: scroll;

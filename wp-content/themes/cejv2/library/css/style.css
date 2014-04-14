@@ -747,18 +747,42 @@ nav a {
 #content #inner-content {
   text-align: left;
 }
-#content #inner-content #hello span {
+#content #inner-content #hello {
+  padding: 0 8%;
+}
+#content #inner-content #hello .salutation {
   font-size: 5rem !important;
   color: #aed66e !important;
   font-weight: 300 !important;
+  line-height: 60px;
 }
-#content #inner-content #hello h3 {
+#content #inner-content #hello .intro {
+  font-size: 2rem !important;
+  color: #a1a1a1 !important;
+  font-weight: 300 !important;
+}
+#content #inner-content #hello .sub-intro {
+  font-size: 1rem !important;
+  color: #a1a1a1 !important;
+  font-weight: 300 !important;
+  font-style: italic;
+}
+#content #inner-content #hello .green {
   color: #aed66e !important;
-  opacity: 0.2;
-  font-weight: 100 !important;
 }
 #content #inner-content #hello p {
   text-align: left !important;
+}
+#content #inner-content #hello .buttons a {
+  font-family: 'Josefin Slab', serif;
+  font-style: italic;
+  line-height: 40px;
+  text-decoration: none;
+}
+#content #inner-content #hello .buttons a div {
+  border: 1px solid #aed66e;
+  text-align: center;
+  max-width: 250px;
 }
 #content .resume a,
 #content .resume h2,
@@ -1171,6 +1195,7 @@ footer p {
 }
 footer .left p {
   visibility: hidden;
+  padding-bottom: 20px;
 }
 /*
 LARGER MOBILE DEVICES
@@ -1457,6 +1482,9 @@ CONTENT
   }
   #content #inner-content {
     width: 100%;
+  }
+  #content #inner-content #hello {
+    padding: 0 15% !important;
   }
   .article-container {
     height: 500px;
