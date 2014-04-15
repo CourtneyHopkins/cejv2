@@ -23,8 +23,8 @@ body {
 
 p {
 	font-size: 0.8rem;
-	// text-transform: uppercase;
 	letter-spacing: 1px;
+	color: @light-gray;
 }
 
 /*********************
@@ -203,29 +203,71 @@ nav {
 				font-style: italic;
 			}
 
-			.green {
-				color: @green !important;
-			}
-
 			p {
 				text-align: left !important;
 			}
 
-			.buttons {
-				a {
-					font-family: @serif;
-					font-style: italic;
-					line-height: 40px;
-					text-decoration: none;
+			img {
+				display: none;
+			}
+		}
 
-					div {
-						border: 1px solid @green;
-						text-align: center;
-						max-width: 250px;
-						// margin: 15px auto;
-					}
+		.buttons {
+			a {
+				font-family: @serif;
+				font-style: italic;
+				line-height: 40px;
+				text-decoration: none;
+
+				div {
+					border: 1px solid @green;
+					text-align: center;
+					max-width: 250px;
 				}
 			}
+		}
+
+		.skill-wrapper {
+			padding: 0 8%;
+
+			img {
+				padding: 0;
+			}
+		}
+
+		.skill {
+			text-align: center;
+			margin: 20px 0;
+			color: @green;
+			font-size: 3rem;
+			font-family: @serif;
+			font-weight: 100;
+			font-style: italic;
+			border-bottom-style: double;
+		}
+
+		.green {
+			color: @green !important;
+		}
+
+		.main-description {
+			border: 1px solid @green;
+			padding: 20px 40px;
+			margin: 20px 8%;
+			//background: #5c5c5c;
+
+			p {
+				padding: 0 !important;
+			}
+		}
+
+		p {
+			padding: 0 8%;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 
