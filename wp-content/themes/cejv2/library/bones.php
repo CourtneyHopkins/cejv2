@@ -368,4 +368,10 @@ function bones_get_the_author_posts_link() {
 	return $link;
 }
 
+function courtney_get_image_src( $id, $size ) {
+    $src = '';
+    if ( $id > 0 ) list( $src, $width, $height ) = wp_get_attachment_image_src( $id, $size );
+    return $src;
+}
+
 ?>

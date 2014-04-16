@@ -47,7 +47,7 @@
 					</div>
 				</div>
 			</header>
-			<div class="mobile-nav-dropdown" style="display: none;">
+			<div class="mobile-nav-dropdown clearfix" style="display: none;">
 				<?php bones_main_nav(); ?>
 			</div>
 			<div class="tagline-mobile">

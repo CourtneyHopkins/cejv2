@@ -243,6 +243,15 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.item {
+  width: 49% !important;
+  height: 175px;
+  float: left;
+}
+.item .overlay {
+  padding: 125px 15px 15px 15px;
+  height: 175px;
+}
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */
@@ -495,6 +504,14 @@ CONTENT
 }
 #content #inner-content .skill-wrapper {
   padding: 0 15%;
+}
+.portfolio-container .item {
+  width: 33% !important;
+  height: 200px;
+}
+.portfolio-container .item .overlay {
+  padding: 85px 15px 15px;
+  height: 200px;
 }
 .article-container {
   height: 100vh;
