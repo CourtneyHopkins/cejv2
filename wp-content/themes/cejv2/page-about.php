@@ -16,7 +16,7 @@ Template Name: About
                             <span class="intro">My prime directive is to be the kryptonite to bad design and poor user experiences.</span>
                             <br /><br />
                             <div class="buttons">
-                                <a href="">
+                                <a href="/portfolio_item/">
                                     <div>See what I'm up to</div>
                                 </a>
                             </div>

@@ -49,6 +49,7 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 
 // Thumbnail sizes
 add_image_size( 'portfolio-thumb', 600, 400, true );
+add_image_size( 'portfolio-full', 2000, 9999, false );
 
 /*
 to add more sizes, simply copy a line from above

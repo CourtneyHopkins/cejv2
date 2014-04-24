@@ -19,8 +19,8 @@ Template Name: Homepage
 						<br /><br /><br /><br /> 
 						<div class="buttons clearfix">
 							<a href="/about/"><div class="fourcol first">Learn more about me !</div></a>
-							<a href="/portfolio/"><div class="fourcol">View my work !</div></a>
-							<a href="/about/"><div class="fourcol last">Contact me !</div></a>
+							<a href="/portfolio_item/"><div class="fourcol">View my work !</div></a>
+							<a href="/contact/"><div class="fourcol last">Contact me !</div></a>
 						</div>
 					</div>
 				</div>

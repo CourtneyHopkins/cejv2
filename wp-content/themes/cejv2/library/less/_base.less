@@ -272,15 +272,24 @@ nav {
 	}
 
 	.resume {
-		a, h2, span {
-			text-decoration: none !important;
-			color: #FFD698;
+
+		li {
+			margin-bottom: 100px;
+
+			h2, span {
+				text-decoration: none !important;
+			}
+
+			p {
+			 	padding: 0 !important;
+		 	}
 		}
 
 		span {
 			font-style: italic;
 			font-family: @serif;
 			font-weight: 100;
+			color: @green;
 		}
 	}
 }
@@ -319,6 +328,35 @@ nav {
 	}
 }
 
+.port-header {
+	font-family: @serif;
+	font-style: italic;
+	color: @green;
+	font-size: 1.5rem !important;
+}
+
+.port-description {
+	color: @light-gray;
+	margin-bottom: 50px;
+	font-size:0.8rem;
+}
+
+.portfolio-item-container {
+
+	img {
+		padding: 0;
+	}
+
+	.buttons {
+
+		div {
+			float: none !important;
+			letter-spacing: 1px;
+			margin: 15px auto;
+			width: 300px;
+		}
+	}
+}
 
 article {
 	background: @white;
@@ -805,11 +843,13 @@ article {
 
 	form {
 		margin: 0.75em 0;
+		width: 100%;
 
 		li {
 			list-style-type: none;
 			clear: both;
 			margin-bottom: 0.7335em;
+			width: 100%;
 
 			label,
 			small {
@@ -822,13 +862,11 @@ article {
 		input[type=url],
 		textarea {
 			padding: 3px 6px;
-			background: #efefef;
-			border: 2px solid #cecece;
+			background: transparent !important;
+			border: 1px solid @green !important;
 			line-height: 1.5em;
-
-			&:focus {
-				background: #fff;
-			}
+			color: @green !important;
+			width: 100% !important;
 
 			/* form validation */
 			&:invalid {

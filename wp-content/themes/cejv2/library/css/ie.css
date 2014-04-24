@@ -505,6 +505,11 @@ CONTENT
 #content #inner-content .skill-wrapper {
   padding: 0 15%;
 }
+.resume li h2,
+.resume li span {
+  text-decoration: none !important;
+  padding: 0 15% !important;
+}
 .portfolio-container .item {
   width: 33% !important;
   height: 200px;
@@ -512,6 +517,15 @@ CONTENT
 .portfolio-container .item .overlay {
   padding: 85px 15px 15px;
   height: 200px;
+}
+.port-header {
+  padding: 0 20px 10px 20px;
+}
+.port-description {
+  padding: 15px 20px;
+}
+.portfolio-item-container img {
+  padding: 0 20px !important;
 }
 .article-container {
   height: 100vh;
